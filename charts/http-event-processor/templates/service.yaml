@@ -4,7 +4,7 @@ metadata:
   name: {{include "http-event-processor.fullname" .}}
   labels: {{- include "http-event-processor.labels" . | nindent 4}}
 spec:
-  type: {{.Values.service.type}}
+  type: ClusterIP #{{.Values.service.type}}
   ports:
     - port: {{.Values.service.port}}
       targetPort: http
