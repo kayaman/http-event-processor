@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  http-event-processor:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-03-31T22:32:08.225238093Z"
+    description: A Helm chart for HTTP Event Processor (TypeScript application for
+      HAProxy SPOE)
+    digest: 3f3074421652a99f07127c7479cd4cd28cf71a7aa008b2df3bb512c9dc8b61e3
+    name: http-event-processor
+    type: application
+    urls:
+    - https://github.com/kayaman/http-event-processor/releases/download/http-event-processor-0.1.0/http-event-processor-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-03-31T22:32:08.22524704Z"
