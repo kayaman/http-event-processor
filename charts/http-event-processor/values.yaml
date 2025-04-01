@@ -1,0 +1,55 @@
+replicaCount: 1
+
+image:
+  repository: http-event-processor
+  pullPolicy: Always
+  tag: 'latest'
+
+nameOverride: ''
+fullnameOverride: ''
+
+serviceAccount:
+  create: false
+  name: ''
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: ClusterIP
+  port: 8080
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+# Application specific configuration
+app:
+  port: 8080
+  logLevel: 'info'
+  eventExpiryMinutes: 30
+  cleanupIntervalMinutes: 5
+
+# Storage configuration
+persistence:
+  enabled: false
+  size: 1Gi
+  storageClass: ''
+  accessMode: ReadWriteOnce
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
